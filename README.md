@@ -1,12 +1,5 @@
 # Topdeck
 
-<p>
-  <a href="https://github.com/alexcabrera/topdeck/releases"><img src="https://img.shields.io/github/release/alexcabrera/topdeck.svg" alt="Latest Release"></a>
-  <a href="https://pkg.go.dev/github.com/alexcabrera/topdeck"><img src="https://pkg.go.dev/badge/github.com/alexcabrera/topdeck.svg" alt="Go Reference"></a>
-  <a href="https://github.com/alexcabrera/topdeck/actions"><img src="https://github.com/alexcabrera/topdeck/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
-  <a href="https://goreportcard.com/report/github.com/alexcabrera/topdeck"><img src="https://goreportcard.com/badge/github.com/alexcabrera/topdeck" alt="Go Report Card"></a>
-</p>
-
 A beautiful terminal presentation tool. Just markdown.
 
 ## Installation
