@@ -53,7 +53,7 @@ changelog:
 brews:
   - name: topdeck
     repository:
-      owner: charmbracelet
+      owner: alexcabrera
       name: homebrew-tap
     homepage: "https://github.com/alexcabrera/topdeck"
     description: "A beautiful terminal presentation tool"
@@ -63,9 +63,9 @@ brews:
 nfpms:
   - id: packages
     package_name: topdeck
-    vendor: Charmbracelet
+    vendor: alexcabrera
     homepage: "https://github.com/alexcabrera/topdeck"
-    maintainer: "Charmbracelet <hi@charm.sh>"
+    maintainer: "Alex Cabrera"
     description: "A beautiful terminal presentation tool"
     license: MIT
     formats:
