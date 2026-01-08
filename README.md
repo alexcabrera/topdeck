@@ -35,8 +35,6 @@ Download a package for your system from the [releases page](https://github.com/a
 topdeck presentation.md
 ```
 
-That's it. No flags, no configuration. Just present.
-
 ## Writing Presentations
 
 Create a markdown file with slides separated by horizontal rules (`---`):
@@ -128,13 +126,3 @@ Topdeck renders standard GitHub Flavored Markdown:
 - **Links**
 - **Inline code**
 - **Emoji** (`:rocket:`, `:sparkles:`, etc.)
-
-## Philosophy
-
-Topdeck follows **convention over configuration**:
-
-- One beautiful default theme that adapts to your terminal
-- No configuration files
-- No command-line flags (except `--help` and `--version`)
-- Just markdown, just presentations
-
