@@ -9,10 +9,6 @@
 
 A beautiful terminal presentation tool. Just markdown.
 
-<p>
-  <img alt="Topdeck demo" src="https://github.com/alexcabrera/topdeck/assets/demo.gif" width="600">
-</p>
-
 ## Installation
 
 ### Homebrew
