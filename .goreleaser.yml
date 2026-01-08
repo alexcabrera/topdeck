@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+
+project_name: topdeck
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: topdeck
+    main: .
+    binary: topdeck
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - id: default
+    format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE
+      - README.md
+      - example.md
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^ci:"
+      - "^chore:"
+
+brews:
+  - name: topdeck
+    repository:
+      owner: charmbracelet
+      name: homebrew-tap
+    homepage: "https://github.com/alexcabrera/topdeck"
+    description: "A beautiful terminal presentation tool"
+    license: "MIT"
+    directory: Formula
+
+nfpms:
+  - id: packages
+    package_name: topdeck
+    vendor: Charmbracelet
+    homepage: "https://github.com/alexcabrera/topdeck"
+    maintainer: "Charmbracelet <hi@charm.sh>"
+    description: "A beautiful terminal presentation tool"
+    license: MIT
+    formats:
+      - deb
+      - rpm
+      - apk
